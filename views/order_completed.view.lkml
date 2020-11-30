@@ -208,4 +208,9 @@ view: order_completed {
     type: count
     drill_fields: [id, context_library_name, users.context_library_name, users.context_campaign_name, users.id]
   }
+  measure: revenueSum {
+    sql: ${revenue} ;;
+    type: sum
+    value_format: "$0.000,\" K\""
+  }
 }
